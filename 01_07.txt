@@ -1,0 +1,94 @@
+
+
+
+
+Q.1 Write the difference between checked and unchecked exception with example code?
+Ans.Checked Exceptions
+-Checked exceptions are checked at compile-time.Checked exceptions are IOException,SQLException etc.
+
+Unchecked Exceptions 
+-Unchecked exceptions are checked at run-time.These are the unchecked exceptions ArrayIndexOutOfBoundsException,ArithmeticException,NullPointorException  etc.    
+
+int a=50/0;//ArithmeticException
+ 
+int a[]=new int[5];  
+a[10]=50;   //ArrayIndexOutOfBoundsException               
+_______________________________________________________________________________________________
+Q.2 Write the difference between throw and throws with example code
+Ans.
+throw  -
+1) it is used to throw an exception explicitly
+2) it is followed by instance variable
+3) it is used inside the method clause
+4) we cannot throw more than one exception with keyword throw 
+(throw IOException("connection interrupted")
+throw ArithmeticException("Not be divided by Zero") etc)
+
+throws  -
+1) it is used to declare an exception 
+2) it is followed by exception class names
+3) throws is used with the method parameters
+4) we can throws many exceptions with the keyword throws(throws IOException, ArithmeticException, NullPointerException etc )
+
+import java.io.*; 
+class Demo{  
+  void m()throws IOException{  
+   throw new IOException("device error");
+  }  
+  void n()throws IOException{  
+    m();  
+  }  
+  void p(){  
+   try{  
+    n();  
+   }catch(Exception e){System.out.println("exception handled");}  
+  }  
+  public static void main(String args[]){  
+   Demo obj=new Demo();  
+   obj.p();  
+   System.out.println("normal flow...");  
+  }  
+_______________________________________________________________________________________________________________
+Q.3 Write a note or nested try…catch block with example code?
+Ans.One try…catch block written inside the anathor try…catch block
+
+try
+{
+   statement 1;
+   statement 2;
+   try
+   {
+      statement 3;
+      statement 4;
+   }
+   catch(Exception e1)
+   {
+       //Exception Message
+   }
+   
+}
+catch(Exception e3) //Catch of Main try block
+{
+      //Exception Message
+}
+__________________________________________________________________________________________________________
+Q.4 Write a note on MultiThreading and MultiTasking?
+Ans.MultiTasking are executed concurrently.CPU switches between multiple programs to complete their execution in real time, while in multi-threading.They require their own address space.
+Multithreading means in any single process, multiple threads is allowed and again, can run simultaneously. Multitasking is sharing of computing resources(CPU, memory, devices, etc.) among processes, while multithreading is sharing of computing resources among threads of a single process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
