@@ -1,0 +1,68 @@
+Q.1 Explain regular expression and quantifiers with example code?
+Ans.A regular expression or Java Regex  is simply a string that describes a pattern that
+you use to search for matches within some other string.Java Regex API provides 1 interface and 3 classes in java.util.regex package.
+1)MatchResult interface 
+
+2)Matcher class - It implements MatchResult interface and search/match the string.Some methods are String group(),int start(),int end() etc.
+
+3)Pattern class -It is used for define a pattern.Some methods are String pattern(),static Pattern compile(String regex) etc.
+4)PatternSyntaxException class.
+
+Quantifiers-The quantifiers specify the number of occurrences of a character.These are some quantifiers.
+?	occurs once or not at all
++	occurs once or more times
+*	occurs zero or more times
+
+Example:
+import java.util.regex.Matcher;
+
+import java.util.regex.Pattern;
+
+
+public class GreedinessExample 
+   {
+   
+    public static void main(String[] args)
+ {
+    
+    String t = "Longlonglong ago, in a galaxy far far away.";
+    
+      
+    Pattern p1 = Pattern.compile("ago.*far"); 
+
+    Matcher m1 = p1.matcher(t);
+        
+    if (m1.find()) System.out.println("Found: " + m1.group());
+  
+    Pattern p2 = Pattern.compile("ago.*?far"); 
+ 
+    Matcher m2 = p2.matcher(t);
+
+    if (m2.find()) System.out.println("Found: " + m2.group());
+    
+ }
+}  
+_______________________________________________________________________________________________
+Q.4 Describe the different approaches of String processing?
+Ans.Three ways Greedy, Reluctant, and Possessive Quantifiers for used String Processing..
+1)Greedy -  The greedy quantifier is used to match with the longest possible string that matches the pattern 
+2)Reluctant -The reluctant quantifier is used to match with the shortest possible string that matches the pattern
+3)Possessive - The possessive quantifier is used to match the regular expression to the entire string and only matches when the whole string satisfies the criteria
+
+_______________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

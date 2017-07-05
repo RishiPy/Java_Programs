@@ -1,0 +1,20 @@
+1.	What is the difference between System.out ,System.err and System.in?
+Ans. 
+      * System.in is an InputStream object that is a static member of the System class and                    encapsulates input from the keyboard.
+      * System.out  is an PrintStream object of the System class and used for print output on the         command line or in the console window of an IDE   
+      * System.err is used to print error message in output window and This is encapsulated by the         err member of the System class and is also of type PrintStream.
+
+2.	What is the purpose of the System class?
+Ans.    The purpose of System class is for printing and taking input from the user and also                  print/show the error messages on console.The System class provides the static methods setIn           (), setOut(), and setErr() for this purpose.
+
+3.	Which is the abstract parent class of FileWriter ?
+Ans.     Writer
+
+4.	Which class is used to read streams of characters from a file?
+Ans.    InputStreamReader
+
+5.	Which class is used to read streams of raw bytes from a file?
+Ans.    InputInputStream
+
+6.	What are the differences between FileInputStream/FileOutputStream and RandomAccessFile
+Ans.    FileInputStream used for reading the data from the files and this is a sub class of         InputSream and FileOutputStream is used for writing the data into the file and this is a sub         class of OutputSream.Instances of this class support both reading and writing to a random access file. A random access file behaves like a large array of bytes stored in the file system.
